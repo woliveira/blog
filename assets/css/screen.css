@@ -895,3 +895,21 @@ iframe {
     opacity: 0;
     transition: opacity .25s;
 }
+
+.syntaxhighlighter {
+    padding: 20px 0;
+}
+
+.syntaxhighlighter .toolbar {
+    display: none;
+}
+
+pre {
+    font-family: 'Courier New', Courier, monospace; /* Fonte personalizada */
+    font-size: 10px; /* Tamanho da fonte personalizado */
+    line-height: 1.5; /* Espaçamento entre linhas */
+}
+
+code.php {
+    font-size: 16px !important;
+}

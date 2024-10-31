@@ -7,8 +7,8 @@
 
     <link rel="icon" href="assets/images/logo.png">
 
-    <title>Criando uma estrutura simples de coleção e documentos no MongoDB para e-commerce | Wilson Oliveira</title>
-    <meta property="og:title" content="Criando uma estrutura simples de coleção e documentos no MongoDB para e-commerce" />
+    <title>Criando uma estrutura simples de coleção e documentos no MongoDB para eCommerce | Wilson Oliveira</title>
+    <meta property="og:title" content="Criando uma estrutura simples de coleção e documentos no MongoDB para eCommerce" />
     <meta property="og:locale" content="pt_BR" />
     <meta name="description" content="Jekyll template, Medium styled, free for bloggers." />
 
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 
-                                <h1 class="posttitle">Criando uma estrutura simples de coleção e documentos no MongoDB para e-commerce</h1>
+                                <h1 class="posttitle">Criando uma estrutura simples de coleção e documentos no MongoDB para eCommerce</h1>
                             </div>
                           
                             <img class="featured-image img-fluid lazyimg" src="../assets/images/criando-uma-estrutura-simples-de-colecao-e-documentos-no-mongodb-para-ecommerce-02.png" alt="Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf">
@@ -109,28 +109,8 @@
 
                                 <p>Interessante, não é? Agora, por que escolher o MongoDB ao invés do MySQL para este projeto? Principalmente porque vou lidar com dados complexos e dinâmicos, que podem variar em quantidade e estrutura. O MongoDB permite essa flexibilidade, além de proporcionar uma base que será ideal para futuras integrações com o Grafana. Inclusive, já escrevi sobre isso em outro post: <a href="monitoramento-na-pratica-usando-grafana-para-acompanhar-envios-de-eventos-da-efd-reinf.html" target="_blank" title="Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf">Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf</a>.</p>
 
-                                <h3>Objetivo</h3>
-                                <p>O objetivo é montar uma estrutura <strong>SIMPLES</strong> para armazenamento de registros e eventos em tempo real de clientes que estão em nosso eCommerce, e realizar a coleta para que usamos futuramente pelo Grafana e entender os dados do cliente para usar como estratégia.</p>
-                                <p>Vamos fazer de forma simples para mostrar o quanto é fácil a criação nas primeiras etapas.</p>
-
-                                <h3>Apresentando a estrutrura</h3>
-
-                                <ul>
-                                    <li><strong>event_type:</strong> Tipo de evento (ex: "click", "page_view", "add_to_cart", "remove_from_cart", "purchase")</li>
-                                    <li><strong>product_id:</strong> ID do produto (ex: "12345")</li>
-                                    <li><strong>order_id:</strong> ID do pedido (ex: "98765") [apenas para finalização de compras]</li>
-                                    <li><strong>page_url:</strong> URL da página visualizada (ex: "https://www.ecommerce.com/produto/12345") [apenas para visualizações de página]</li>
-                                    <li><strong>quantity:</strong> Quantidade adicionada/removida (ex: 1) [apenas para adição/remover do carrinho]</li>
-                                    <li><strong>total_amount:</strong> Valor total da compra (ex: 99.99) [apenas para finalização de compras]</li>
-                                    <li><strong>timestamp:</strong> Data e hora do evento (ex: "2024-10-31T12:34:56Z")</li>
-                                    <li><strong>user_id:</strong> ID do usuário (ex: "67890")</li>
-                                    <li><strong>device:</strong> Dispositivo utilizado (ex: "desktop", "mobile", "tablet")</li>
-                                    <li><strong>referrer:</strong> Fonte de tráfego (ex: "google.com")</li>
-                                    <li><strong>geo_location:</strong> Localização geográfica (ex: "Brasil", "São Paulo", "SP")</li>
-                                    <li><strong>session_id:</strong> ID da sessão do usuário (ex: "session_12345")</li>
-                                </ul>
-
-                                <p>Vamos usar esses campos para aprender a acessar o MongoDB e criar <strong>coleções</strong>, e vamos também aproveitar para entender alguns conceitos semelhante a quem usa o banco de dados MySQL não ficar tão perdido:</p>
+                                <h2>Fazendo um comparativo entre MySQL e MongoDB</h2>
+                                <p>Para você que não está familiarizado com o MongoDB e só viu o MySQL na sua vida, segue algumas referências para você não ficar perdido.</p>
                                 <table>
                                     <tr>
                                         <td><strong>MySQL</strong></td>
@@ -150,11 +130,11 @@
                                     </tr>
                                     <tr>
                                         <td>Chave Primária</td>
-                                        <td>ID do Documento</td>
+                                        <td><span class="codigo">_id</span> do Documento (ID único)</td>
                                     </tr>
                                     <tr>
                                         <td>Chave Estrangeira</td>
-                                        <td>Referência</td>
+                                        <td>Referência (ou seja, referência manual, pois MongoDB não possui chaves estrangeiras nativas)</td>
                                     </tr>
                                     <tr>
                                         <td>Registro</td>
@@ -162,6 +142,29 @@
                                     </tr>
                                 </table>
                                 <p>&nbsp;</p>
+
+                                <h2>Objetivo da construção</h2>
+                                <p>O objetivo é montar uma estrutura <strong>SIMPLES</strong> para armazenamento de registros e eventos em tempo real de clientes que estão em nosso eCommerce, e realizar a coleta para ser usado futuramente pelo Grafana, com isso fica mais fácil entender os dados que vem do cliente e com base nisso montar uma estratégia na área de negócios.</p>
+
+                                <h2>Apresentando a estrutrura</h2>
+                                <ul>
+                                    <li><strong>event_type:</strong> Tipo de evento (ex: "click", "page_view", "add_to_cart", "remove_from_cart", "purchase")</li>
+                                    <li><strong>product_id:</strong> ID do produto (ex: "12345")</li>
+                                    <li><strong>order_id:</strong> ID do pedido (ex: "98765") [apenas para finalização de compras]</li>
+                                    <li><strong>page_url:</strong> URL da página visualizada (ex: "https://www.ecommerce.com/produto/12345") [apenas para visualizações de página]</li>
+                                    <li><strong>quantity:</strong> Quantidade adicionada/removida (ex: 1) [apenas para adição/remover do carrinho]</li>
+                                    <li><strong>total_amount:</strong> Valor total da compra (ex: 99.99) [apenas para finalização de compras]</li>
+                                    <li><strong>timestamp:</strong> Data e hora do evento (ex: "2024-10-31T12:34:56Z")</li>
+                                    <li><strong>user_id:</strong> ID do usuário (ex: "67890")</li>
+                                    <li><strong>device:</strong> Dispositivo utilizado (ex: "desktop", "mobile", "tablet")</li>
+                                    <li><strong>referrer:</strong> Fonte de tráfego (ex: "google.com")</li>
+                                    <li><strong>geo_location:</strong> Localização geográfica (ex: "Brasil", "São Paulo", "SP")</li>
+                                    <li><strong>session_id:</strong> ID da sessão do usuário (ex: "session_12345")</li>
+                                </ul>
+
+                                <p>Vamos usar esses campos para aprender a acessar o MongoDB e criar <strong>coleções</strong>, e vamos também aproveitar para entender alguns conceitos semelhante a quem usa o banco de dados MySQL não ficar tão perdido:</p>
+
+                                <h2>Vamos aos comandos básicos</h2>
                                 <p>Vamos acessar o MongoDB no terminal (Ubuntu)</p>
 
                                 <div class="syntaxhighlighter">
@@ -230,7 +233,7 @@
                                     </code>
                                 </div>
 
-                                <p>Agora se ao inserir, microserviço acaba inserindo alguns dados a menos, o que acontece? Vamos ver...</p>
+                                <p>Agora, considerando a estrutura criada inicialmente, suponha que o microserviço insira uma quantidade de dados diferente da planejada, vamos observar o que acontece.</p>
 
                                 <div class="syntaxhighlighter">
                                     <code>
@@ -243,7 +246,7 @@
                                     </code>
                                 </div>
 
-                                <p>Iremos ver...</p>
+                                <p>Consultando novamente...</p>
                                 <div class="syntaxhighlighter">
                                     <code>
                                         $: eventos> db.eventos.find().pretty()<br />
@@ -272,77 +275,35 @@
                                     </code>
                                 </div>
 
-                                <p>Essa flexibilidade é uma das características que fazem do MongoDB uma opção muito escalável e rápida para manipulação de dados!</p>
+                                <p>Você pode notar que o segundo documento está menor que o primeiro e os dados está aí sem reclamação por parte do banco de dados.</p>
+                                <p>Essa é a flexibilidade e uma das características que fazem do MongoDB uma opção muito escalável e rápida para manipulação de dados!</p>
 
                                 <p>E essa foi uma estrutura simples que usamos,e é claro que existe muito mais regras de negócio e muito mais campos que precisa se compor a essa estrutura, mas com isso, nós já podemos entrar no Grafana e trabalhar com esses valores para realizar alguns paineis em nossa dashboard como:</p>
-                                <h3>O que é possível fazer com monitoramento com esses dados que criamos?</h3>
+                                <h2>O que é possível fazer no Grafana?</h2>
+                                <p>Aqui está algumas coisas que é possível fazer na dashboard do Grafana e usar os dados acima para ajudar em nosso monitoramento.</p>
                                 
-                                <ul>
-                                    <li>
-                                        <p><strong>Visitas e Visualizações de Página</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Número total de visualizações, número de visualizações por página específica, número de visitas por dispositivo.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráficos de barras para visualizações por página e gráficos de linha para acompanhar visualizações ao longo do tempo.</li>
-                                            <li><strong>Valor</strong>: Esse painel ajuda a entender quais páginas e produtos são mais populares e se há padrões de horário ou dispositivos.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Acompanhamento de Cliques em Produtos</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Contagem de cliques por produto, cliques por origem (referrer), distribuição de cliques por dispositivos.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de barras para cliques por produto e gráfico de pizza para distribuição de dispositivos e fontes de cliques.</li>
-                                            <li><strong>Valor</strong>: Esse painel permite ver quais produtos estão chamando mais atenção, qual a origem do tráfego e quais dispositivos são mais utilizados.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Interações com o Carrinho de Compras</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Total de adições ao carrinho, remoções do carrinho, taxa de conversão de adições para compras.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de barras para adições e remoções por produto, gráfico de linha para monitorar a tendência ao longo do tempo.</li>
-                                            <li><strong>Valor</strong>: Esse painel ajuda a identificar produtos que têm muita adição ao carrinho, mas não convertem em compra, indicando onde o e-commerce pode estar perdendo clientes.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Finalizações de Compras e Receita Gerada</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Contagem de finalizações de compra, receita total, receita média por compra, volume de compras por dispositivo.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráficos de linha para acompanhar a receita e o número de compras ao longo do tempo, gráfico de pizza para dividir as compras por dispositivo.</li>
-                                            <li><strong>Valor</strong>: Esse painel é essencial para acompanhar o desempenho financeiro e identificar o comportamento de compra nos diferentes dispositivos.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Análise de Localização Geográfica</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Total de eventos por região (país, estado, cidade), receita por região, distribuição geográfica de visualizações e compras.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Mapas de calor para identificar onde estão os usuários mais ativos, gráficos de barras para comparações regionais de receita e visualizações.</li>
-                                            <li><strong>Valor</strong>: Este painel permite ver as áreas geográficas mais ativas, ajudando a direcionar campanhas de marketing ou a melhorar a experiência para determinadas regiões.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Taxa de Conversão por Sessão</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Contagem de sessões, taxa de conversão de visitas para compra, tempo médio de navegação até a compra.</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de linha para taxa de conversão ao longo do tempo e gráfico de barras para contagem de sessões.</li>
-                                            <li><strong>Valor</strong>: Esse painel é útil para avaliar o engajamento dos usuários e a eficácia de sessões em converter visualizações e interações em vendas.</li>
-                                        </ul>
-                                    </li>
-                                    <p>&nbsp;</p>
-                                    <li>
-                                        <p><strong>Eventos em Tempo Real</strong></p>
-                                        <ul>
-                                            <li><strong>Métricas</strong>: Número de eventos por tipo em tempo real (visualizações, cliques, adições ao carrinho, compras).</li>
-                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de linhas atualizado em tempo real para acompanhar o volume de eventos e gauge para contagem de eventos específicos.</li>
-                                            <li><strong>Valor</strong>: Esse painel oferece uma visão em tempo real do que os usuários estão fazendo no site, ideal para detectar picos de atividade e responder rapidamente a tendências ou problemas.</li>
-                                        </ul>
-                                    </li>
-                                </ul>
+                                <p><strong>Visitas e Visualizações de Página</strong><br />
+                                É possível fazer como métrica o número total de visualizações, visualizações por página específica e visitas por dispositivo. Gráficos de barras podem mostrar visualizações por página, enquanto gráficos de linha podem acompanhar visualizações ao longo do tempo. Esse painel revela as páginas e produtos mais populares, além de padrões de horário e dispositivos.
 
-                                <p>Esse é um bom começo para entender como uma ferramenta simples e poderosa como o MongoDB pode ajudar a criar uma estrutura escalável para e-commerce.</p>
+                                <p><strong>Acompanhamento de Cliques em Produtos</strong><br />
+                                Como métrica, podem-se considerar a contagem de cliques por produto, a origem dos cliques (referência) e a distribuição por dispositivo. Um gráfico de barras pode representar cliques por produto, e um gráfico de pizza pode mostrar a distribuição por dispositivo e fonte de cliques. Esse painel identifica os produtos que mais atraem, as origens do tráfego e os dispositivos mais utilizados.</p>
+
+                                <p><strong>Interações com o Carrinho de Compras</strong><br />
+                                As métricas podem incluir o total de adições e remoções do carrinho e a taxa de conversão de adições para compras. Um gráfico de barras pode ilustrar adições e remoções por produto, e um gráfico de linha pode monitorar a tendência ao longo do tempo. Esse painel aponta os produtos adicionados com frequência ao carrinho, mas que não se convertem em vendas, revelando possíveis pontos de perda de clientes.</p>
+
+                                <p><strong>Finalizações de Compras e Receita Gerada</strong><br />
+                                As métricas podem abranger contagem de finalizações de compra, receita total, receita média por compra e volume de compras por dispositivo. Gráficos de linha podem acompanhar a receita e as compras ao longo do tempo, e um gráfico de pizza pode dividir as compras por dispositivo. Esse painel é essencial para acompanhar o desempenho financeiro e entender o comportamento de compra em diferentes dispositivos.</p>
+
+                                <p><strong>Análise de Localização Geográfica</strong><br />
+                                Pode-se considerar como métrica o total de eventos por região (país, estado, cidade), receita por região e a distribuição geográfica de visualizações e compras. Mapas de calor são úteis para identificar os locais mais ativos, enquanto gráficos de barras permitem comparações regionais de receita e visualizações. Esse painel destaca as áreas geográficas mais ativas, ajudando a direcionar campanhas de marketing e melhorar a experiência por região.</p>
+
+                                <p><strong>Taxa de Conversão por Sessão</strong><br />
+                                As métricas incluem contagem de sessões, taxa de conversão de visitas para compra e o tempo médio de navegação até a compra. Um gráfico de linha pode ilustrar a taxa de conversão ao longo do tempo, e um gráfico de barras pode mostrar a contagem de sessões. Esse painel é útil para avaliar o engajamento dos usuários e a eficácia de sessões em converter visualizações e interações em vendas.</p>
+
+                                <p><strong>Eventos em Tempo Real</strong><br />
+                                As métricas podem englobar o número de eventos em tempo real por tipo (visualizações, cliques, adições ao carrinho, compras). Um gráfico de linhas atualizado em tempo real pode acompanhar o volume de eventos, enquanto um gauge exibe a contagem de eventos específicos. Esse painel oferece uma visão em tempo real das ações dos usuários no site, permitindo detectar picos de atividade e responder rapidamente a tendências ou problemas.</p>
+
+                                <p>Esse é um excelente ponto de partida para entender como uma ferramenta simples e poderosa como o MongoDB pode auxiliar na criação de uma estrutura escalável para e-commerce.</p>
                                 <p>E espero que este post tenha te ajudado de alguma forma, então até a próxima.</p>
                             </div>
                         </div>

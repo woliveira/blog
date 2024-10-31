@@ -669,6 +669,10 @@ ul.tags li a:hover {
     margin-bottom: 1.5rem;
 }
 
+.red {
+    color: red;
+}
+
 .h1,
 .h2,
 .h3,
@@ -682,6 +686,19 @@ h4,
 h5,
 h6 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table td {
+    border: solid 1px #363636;
+    padding: 5px 10px;
 }
 
 .article-post .h1,
@@ -897,7 +914,7 @@ iframe {
 }
 
 .syntaxhighlighter {
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .syntaxhighlighter .toolbar {
@@ -907,7 +924,11 @@ iframe {
 pre {
     font-family: 'Courier New', Courier, monospace; /* Fonte personalizada */
     font-size: 10px; /* Tamanho da fonte personalizado */
-    line-height: 1.5; /* Espaçamento entre linhas */
+    line-height: 1.5; /* Espaï¿½amento entre linhas */
+}
+
+code {
+    color: #fff;
 }
 
 code.php {

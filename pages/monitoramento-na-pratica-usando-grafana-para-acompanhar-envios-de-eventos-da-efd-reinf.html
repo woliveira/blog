@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <title>Home | Wilson Oliveira</title>
+    <meta property="og:title" content="Home" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="description" content="Jekyll template, Medium styled, free for bloggers." />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css"> <!-- Tema escuro -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../assets/css/screen.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="layout-default">
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+        <div class="container pr-0">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.png" alt="Wilson Oliveira"> <span class="sitetitle">Technical Blog</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/wilson-oliveira-898b0915"><i class="fab fa-linkedin"></i> Linkdn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" target="_blank" class="nav-link" href="https://github.com/woliveira"><i class="fab fa-github"></i> Meu Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="site-content">
+        <div class="container">
+            <div class="mainheading">
+            </div>
+
+            <div class="main-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 pl-0">
+                            <div class="share sticky-top sticky-top-offset">
+                                <p>Share</p>
+                                <ul>
+                                    <li class="ml-1 mr-1">
+                                        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://woliveira.github.io/blog/a-ausencia-do-solid-e-o-inevitavel-caminho-para-o-desastre.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                                <div class="sep"></div>
+                                <ul>
+                                    <li>
+                                    <a class="small smoothscroll" href="#disqus_thread"></a>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 flex-first flex-md-unordered">
+                            <div class="mainheading">
+                                <div class="row post-top-meta">
+                                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                                        <img class="author-thumb" src="https://avatars.githubusercontent.com/u/136635?v=4" alt="Wilson Oliveira">
+                                    </div>
+                                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                                        <a target="_blank" class="link-dark" href="https://msfidelis.github.io/">Wilson Oliveira</a><br />
+                                        <span class="author-description">Full Stack Developer, PHP, GO, AWS, Node.Js, MySQL, MongoDb e Grafana</span>
+                                    </div>
+                                </div>
+                                
+                                <h1 class="posttitle">Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf</h1>
+                            </div>
+                          
+                            <img class="featured-image img-fluid lazyimg" src="../assets/images/monitoramento-na-pratica-usando-grafana-para-acompanhar-envios-de-eventos-da-efd-reinf-02.png" alt="Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf">
+                            
+                            <div class="article-post">
+                                <p><i>Neste post, compartilho conhecimentos sobre tecnologias que podem contribuir para o desenvolvimento de projetos escaláveis.</i></p>
+
+                                <p>A observabilidade com Grafana é um tema que muitos desenvolvedores já conhecem ou experimentaram, no entanto, há um ponto que precisa ficar claro: usar apenas o Grafana não significa que você possui uma solução completa de observabilidade. pois a observabilidade é composta por três pilares principais:</p>
+                                <p>
+                                    <ul>
+                                        <li>Métricas</li>
+                                        <li>Logs</li>
+                                        <li>Traces</li>
+                                    </ul>
+                                </p>
+
+                                <p>...que, quando combinados, oferecem uma visão abrangente do sistema, e o Grafana cobre apenas uma parte dessa abordagem.</p>
+                                <p>Para relembrar, o Grafana é uma poderosa ferramenta de monitoramento em tempo real, ele se conecta a um banco de dados onde os dados são armazenados e apresenta esses dados de maneira visual e interativa, permitindo uma visão ampla e detalhada do sistema.</p>
+                                <p>Usando o Grafana, é possível analisar a performance de uma funcionalidade ao longo do tempo e identificar tendências e problemas. Essa visualização não é apenas “bonita” — ela é essencial para entender como os usuários estão utilizando a aplicação e onde estão os gargalos, e com essas informações, é possível otimizar recursos e aprimorar a experiência para os clientes, incluindo ajustes em tempo real.</p>
+
+                                <h3>Um pequeno cenário porém muito importante</h3>
+                                <p class="red"><strong>Aviso importante:</strong> Este cenário é um cenário simples e pequeno apenas para demonstrar uma falha e uma chamada para correção, então não se baseia em uma simples dashboard com intuíto educacional com uma dashboard que precisa ser feito em um ambiente real.</p>
+                                <p>Vou demonstrar aqui usando um pequeno cenário, muito pequeno mesmo para vocês entenderem na prática como podemos através do monitoramento pinçar um problema que pode ser muitas vezes invisível sem um monitorament.</p>
+                                
+                                <h3>Contextualizando</h3>
+                                <p>Neste exemplo interessante, temos um cenário de envio de eventos de impostos para o eCAC, que é um portal eletrônico da Receita Federal, onde empresas que emitem notas fiscais com retenções de INSS, PIS, COFINS, CSLL e Agregados precisam enviar mensalmente esses dados como parte da EFD-Reinf (Escrituração Fiscal Digital de Retenções e Outras Informações Fiscais), sendo um envio obrigatório que deve ocorrer entre os dias 1 e 15 de cada mês (não se esqueça dessa data hehe).</p>
+                                <p>Com o Grafana, é possível monitorar o desempenho desse processo ao longo do tempo, identificando padrões nas entregas dos clientes e buscando pontos de melhoria na ferramenta, o que permite otimizar a plataforma para maior eficiência no envio e redução de possíveis erros de processamento, ajudando as empresas a cumprir essa exigência legal de maneira ágil e precisa.</p>
+
+                                <h3>Entendendo os dados</h3>
+                                <p>Primeiro vamos vou mostrar uns dados e vamos entender o que se passa nesses logs, e é claro que o céu é o limite quando se fala em melhorar quais <strong>dados metrificar para o monitoramento</strong>, mas vamos nos atentar em apenas um problema comum, e que a correção não será tratado nesse post, mas é uma maneira de entendermos que em algum momento de nosso microserviço está falhando na missão.</p>
+                                <p><strong>Neste cenário coloquei apenas alguns dados para demonstrar um pequeno problema</strong>, então não se baseia em uma dashboard completa referente a analisar envios de eventos da EFD-Reinf, então vou demonstrar o que é o que aqui:</p>
+                                <ul>
+                                    <li><strong>R-2010:</strong> Evento referente à retenção de contribuição previdenciária (INSS) sobre serviços tomados. É utilizado para declarar valores retidos de prestadores de serviço.
+                                    <li><strong>R-2099:</strong> Evento de fechamento dos eventos periódicos na EFD-Reinf, que consolida e encerra os envios do período, permitindo que os dados sejam validados e processados pelo sistema da Receita Federal.
+                                    <li><strong>MS1047:</strong> Código de erro que indica que o valor informado deve ser igual a 11% da base de cálculo da retenção de contribuição previdenciária. Esse erro ocorre quando o valor informado diverge da base esperada.
+                                    <li><strong>MS1078:</strong> Código de erro que ocorre quando o valor retido informado excede o limite permitido para a base de cálculo da contribuição previdenciária.
+                                    <li><strong>R-2099:</strong> R-2099: Evento de fechamento dos eventos periódicos na EFD-Reinf para retenções previdenciárias. Utilizado para consolidar e encerrar os dados de um período, indicando que todas as informações de retenção de INSS foram corretamente enviadas à Receita Federal.</li>
+                                    <li><strong>R-4099:</strong> Esse evento finaliza o envio dos dados periódicos relacionados a tributos como PIS, COFINS, CSLL e impostos retidos em geral na EFD-Reinf. É utilizado para consolidar e encerrar as informações desses tributos no período, confirmando que todas as obrigações associadas foram reportadas à Receita Federal.</li>
+                                </ul>
+
+                                <p>Vou apresentar um cenário que pode nos ajudar a melhorar nossa aplicação, vendo que um erro está aparecendo muitas vezes.</p>
+
+                                <img class="featured-image img-fluid lazyimg" src="../assets/images/grafana-efd-reinf.png" alt="Painel EFD-Reinf">
+                                
+                                <p>Nesse painel acima, estamos observando uma quantidade significativa de ocorrências do erro MS1047 ao longo do período, e esse erro indica que <i>"O valor informado deve ser igual a 11% da base de cálculo da retenção da contribuição previdenciária."</i></p>
+                                                                
+                                <p>Esse erro ocorre quando o valor inserido pelo cliente no campo de retenção de INSS em uma nota fiscal difere de 11% da base de cálculo correspondente e ao transmitir essa informação ao eCAC, o sistema retorna o erro, exigindo que o cliente corrija o valor diretamente no ERP.</p>
+                                <h3>A grande questão !</h3>
+                                <p>Diante disso, surge a seguinte questão: <strong>como podemos melhorar a tela de cadastro da nota fiscal para que o cliente insira corretamente o valor da retenção?</strong> Essa é uma pergunta que temos que refletir para evitar que o cliente por algum motivo não erre no calculo.</p>
+                                <p>Corrigindo... fazendo testes...</p>
+
+                                <h3>Conclusão</h3>
+                                <p>Em resumo, é fundamental compreender a importância do uso do Grafana para monitoramento das suas aplicações, no entanto, mais do que criar métricas por criar, é essencial planejar e implementar melhorias constantes para obter uma visão mais ampla e estratégica, e vale lembrar que o Grafana, isoladamente, não constitui uma solução completa de observabilidade, pois, para alcançar uma visão realmente abrangente, é necessário integrá-lo a outras ferramentas de monitoramento mencionadas anteriormente.</p>
+                                <p>Aprendemos que, sem um monitoramento eficaz e atualizações frequentes, poderíamos nunca identificar áreas que precisam de melhorias para fortalecer nossa aplicação, já que o painel no Grafana permite otimizar a ferramenta e detectar erros em tempo real, inclusive recorrências que podem causar insatisfação dos clientes e dificultar o cumprimento de suas obrigações fiscais, o que, a longo prazo, pode levar à perda de clientes, sendo assim, a eficácia desse painel é crucial para assegurar um serviço confiável e eficiente.</p>
+                                
+                                <p>Bom... espero que este post tenha te ajudado de alguma forma, então até a próxima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        Copyright &copy; 2024 - Wilson Oliveira 
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                        <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.min.js"></script>
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../assets/js/mediumish.js"></script>
+</body>
+</html>

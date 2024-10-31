@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <title>Home | Wilson Oliveira</title>
+    <meta property="og:title" content="Home" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="description" content="Jekyll template, Medium styled, free for bloggers." />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css"> <!-- Tema escuro -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../assets/css/screen.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="layout-default">
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+        <div class="container pr-0">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.png" alt="Wilson Oliveira"> <span class="sitetitle">Technical Blog</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/wilson-oliveira-898b0915"><i class="fab fa-linkedin"></i> Linkdn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" target="_blank" class="nav-link" href="https://github.com/woliveira"><i class="fab fa-github"></i> Meu Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="site-content">
+        <div class="container">
+            <div class="mainheading">
+            </div>
+
+            <div class="main-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 pl-0">
+                            <div class="share sticky-top sticky-top-offset">
+                                <p>Share</p>
+                                <ul>
+                                    <li class="ml-1 mr-1">
+                                        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://woliveira.github.io/blog/a-ausencia-do-solid-e-o-inevitavel-caminho-para-o-desastre.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                                <div class="sep"></div>
+                                <ul>
+                                    <li>
+                                    <a class="small smoothscroll" href="#disqus_thread"></a>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 flex-first flex-md-unordered">
+                            <div class="mainheading">
+                                <div class="row post-top-meta">
+                                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                                        <img class="author-thumb" src="https://avatars.githubusercontent.com/u/136635?v=4" alt="Wilson Oliveira">
+                                    </div>
+                                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                                        <a target="_blank" class="link-dark" href="https://msfidelis.github.io/">Wilson Oliveira</a><br />
+                                        <span class="author-description">Full Stack Developer, PHP, GO, AWS, Node.Js, MySQL, MongoDb e Grafana</span>
+                                    </div>
+                                </div>
+                                
+                                <h1 class="posttitle">Criando uma estrutura simples de coleção e documentos no MongoDB para e-commerce</h1>
+                            </div>
+                          
+                            <img class="featured-image img-fluid lazyimg" src="../assets/images/criando-uma-estrutura-simples-de-colecao-e-documentos-no-mongodb-para-ecommerce-02.png" alt="Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf">
+                            
+                            <div class="article-post">
+                                <p><i>Neste post, compartilho conhecimentos sobre tecnologias que podem contribuir para o desenvolvimento de projetos escaláveis.</i></p>
+
+                                <p>Existem muitos tutoriais na internet sobre como construir uma estrutura de dados usando MongoDB, tanto em vídeo quanto em texto. Aqui, vou trazer uma abordagem semelhante, mas com alguns diferenciais, acredito que quanto mais conteúdo, mesmo que parecido, melhor para quem deseja aprender, isso auxilia o desenvolvedor que quer entender de diferentes ângulos ou explorar outras maneiras de realizar determinadas tarefas, especificamente no contexto de desenhar uma estrutura para e-commerce, voltada para Laravel (não abordarei detalhes específicos aqui), sendo um fork, essa estrutura com MongoDB terá como objetivo armazenar dados provenientes de um e-commerce.</p>
+                                <p>Criar tabelas é uma tarefa simples, mas é importante refletir: <strong>por que optar pelo MongoDB?</strong> Essa pergunta é simples de responder, mas antes, é necessário entender dois tipos de banco de dados, os relacionais e os não relacionais, vou usar nosso querido MySQL como exemplo e, em seguida, demonstrar brevemente as diferenças e o motivo para usar cada um em tarefas específicas:</p>
+                                <ul>
+                                    <li><strong>MySQL:</strong> Um banco de dados relacional que organiza dados em tabelas, utiliza esquemas fixos, ideal para aplicações que requerem transações complexas e integridade referencial.</li>
+                                    <li><strong>MongoDB:</strong> Um banco de dados não relacional que armazena dados em documentos no formato JSON, é flexível e escalável, excelente para aplicações que demandam agilidade e alta performance na manipulação de grandes volumes de dados.</li>
+                                </ul>
+
+                                <p>Interessante, não é? Agora, por que escolher o MongoDB ao invés do MySQL para este projeto? Principalmente porque vou lidar com dados complexos e dinâmicos, que podem variar em quantidade e estrutura. O MongoDB permite essa flexibilidade, além de proporcionar uma base que será ideal para futuras integrações com o Grafana. Inclusive, já escrevi sobre isso em outro post: <a href="monitoramento-na-pratica-usando-grafana-para-acompanhar-envios-de-eventos-da-efd-reinf.html" target="_blank" title="Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf">Monitoramento na prática usando Grafana para acompanhar envios de eventos da EFD-Reinf</a>.</p>
+
+                                <h3>Objetivo</h3>
+                                <p>O objetivo é montar uma estrutura <strong>SIMPLES</strong> para armazenamento de registros e eventos em tempo real de clientes que estão em nosso eCommerce, e realizar a coleta para que usamos futuramente pelo Grafana e entender os dados do cliente para usar como estratégia.</p>
+                                <p>Vamos fazer de forma simples para mostrar o quanto é fácil a criação nas primeiras etapas.</p>
+
+                                <h3>Apresentando a estrutrura</h3>
+
+                                <ul>
+                                    <li><strong>event_type:</strong> Tipo de evento (ex: "click", "page_view", "add_to_cart", "remove_from_cart", "purchase")</li>
+                                    <li><strong>product_id:</strong> ID do produto (ex: "12345")</li>
+                                    <li><strong>order_id:</strong> ID do pedido (ex: "98765") [apenas para finalização de compras]</li>
+                                    <li><strong>page_url:</strong> URL da página visualizada (ex: "https://www.ecommerce.com/produto/12345") [apenas para visualizações de página]</li>
+                                    <li><strong>quantity:</strong> Quantidade adicionada/removida (ex: 1) [apenas para adição/remover do carrinho]</li>
+                                    <li><strong>total_amount:</strong> Valor total da compra (ex: 99.99) [apenas para finalização de compras]</li>
+                                    <li><strong>timestamp:</strong> Data e hora do evento (ex: "2024-10-31T12:34:56Z")</li>
+                                    <li><strong>user_id:</strong> ID do usuário (ex: "67890")</li>
+                                    <li><strong>device:</strong> Dispositivo utilizado (ex: "desktop", "mobile", "tablet")</li>
+                                    <li><strong>referrer:</strong> Fonte de tráfego (ex: "google.com")</li>
+                                    <li><strong>geo_location:</strong> Localização geográfica (ex: "Brasil", "São Paulo", "SP")</li>
+                                    <li><strong>session_id:</strong> ID da sessão do usuário (ex: "session_12345")</li>
+                                </ul>
+
+                                <p>Vamos usar esses campos para aprender a acessar o MongoDB e criar <strong>coleções</strong>, e vamos também aproveitar para entender alguns conceitos semelhante a quem usa o banco de dados MySQL não ficar tão perdido:</p>
+                                <table>
+                                    <tr>
+                                        <td><strong>MySQL</strong></td>
+                                        <td><strong>MongoDB</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tabela</td>
+                                        <td>Coleção</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Linha</td>
+                                        <td>Documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coluna</td>
+                                        <td>Campo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chave Primária</td>
+                                        <td>ID do Documento</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chave Estrangeira</td>
+                                        <td>Referência</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Registro</td>
+                                        <td>Documento</td>
+                                    </tr>
+                                </table>
+                                <p>&nbsp;</p>
+                                <p>Vamos acessar o MongoDB no terminal (Ubuntu)</p>
+
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: mongosh
+                                    </code>
+                                </div>
+                                
+                                <p>Criar um banco de dados:</p>
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: use ecommerce
+                                    </code>
+                                </div>
+                                <p>Criar uma nova coleção chamada "eventos", como se fosse criar uma tabela:</p>
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: db.createCollection("eventos")
+                                    </code>
+                                </div>
+
+                                <p>Agora vamos inserir um registro. Ao adicionar um documento (registro) na coleção, o MongoDB cria automaticamente os campos, sem a necessidade de defini-los previamente, não precisando definir antes quais campos vamos adicionar.</p>
+                                <p>Usamos o db.{nomeDaSuaCollection} e o método insertOne()
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: db.eventos.insertOne({<br />
+                                            &nbsp;&nbsp;&nbsp;event_type: "click",<br />
+                                            &nbsp;&nbsp;&nbsp;product_id: "12345",<br />
+                                            &nbsp;&nbsp;&nbsp;timestamp: new Date("2024-10-31T12:34:56Z"),<br />
+                                            &nbsp;&nbsp;&nbsp;user_id: "67890",<br />
+                                            &nbsp;&nbsp;&nbsp;device: "mobile",<br />
+                                            &nbsp;&nbsp;&nbsp;referrer: "google.com",<br />
+                                            &nbsp;&nbsp;&nbsp;geo_location: "Brasil, São Paulo, SP",<br />
+                                            &nbsp;&nbsp;&nbsp;session_id: "session_12345"<br />
+                                        })
+                                    </code>
+                                </div>
+
+                                <p>Pronto, se agora realizarmos uma consulta, já vamos ver os dados inseridos:</p>
+
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: db.eventos.find().pretty()
+                                    </code>
+                                </div>
+
+                                É isso que vamos ver:
+
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        eventos> db.eventos.find().pretty()<br />
+                                        [<br />
+                                        &nbsp;&nbsp;{<br />
+                                                &nbsp;&nbsp;&nbsp;_id: ObjectId('6723b081e8022a59d3c1c18c'),<br />
+                                                &nbsp;&nbsp;&nbsp;event_type: 'purchase',<br />
+                                                &nbsp;&nbsp;&nbsp;order_id: '98765',<br />
+                                                &nbsp;&nbsp;&nbsp;product_ids: [ '12345', '67890' ],<br />
+                                                &nbsp;&nbsp;&nbsp;total_amount: 99.99,<br />
+                                                &nbsp;&nbsp;&nbsp;timestamp: ISODate('2024-10-31T12:37:00.000Z'),<br />
+                                                &nbsp;&nbsp;&nbsp;user_id: '67890',<br />
+                                                &nbsp;&nbsp;&nbsp;device: 'mobile',<br />
+                                                &nbsp;&nbsp;&nbsp;geo_location: 'Brasil, São Paulo, SP',<br />
+                                                &nbsp;&nbsp;&nbsp;session_id: 'session_12345'<br />
+                                                &nbsp;&nbsp;}<br />
+                                        ]<br />
+                                    </code>
+                                </div>
+
+                                <p>Agora se ao inserir, microserviço acaba inserindo alguns dados a menos, o que acontece? Vamos ver...</p>
+
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: db.eventos.insertOne({<br />
+                                            &nbsp;&nbsp;&nbsp;event_type: "click",<br />
+                                            &nbsp;&nbsp;&nbsp;product_id: "12345",<br />
+                                            &nbsp;&nbsp;&nbsp;timestamp: new Date("2024-10-31T12:34:56Z"),<br />
+                                            &nbsp;&nbsp;&nbsp;session_id: "session_12345"<br />
+                                        })
+                                    </code>
+                                </div>
+
+                                <p>Iremos ver...</p>
+                                <div class="syntaxhighlighter">
+                                    <code>
+                                        $: eventos> db.eventos.find().pretty()<br />
+                                        [<br />
+                                        {<br />
+                                            &nbsp;&nbsp;&nbsp;_id: ObjectId('6723b081e8022a59d3c1c18c'),<br />
+                                            &nbsp;&nbsp;&nbsp;event_type: 'purchase',<br />
+                                            &nbsp;&nbsp;&nbsp;order_id: '98765',<br />
+                                            &nbsp;&nbsp;&nbsp;product_ids: [ '12345', '67890' ],<br />
+                                            &nbsp;&nbsp;&nbsp;total_amount: 99.99,<br />
+                                            &nbsp;&nbsp;&nbsp;timestamp: ISODate('2024-10-31T12:37:00.000Z'),<br />
+                                            &nbsp;&nbsp;&nbsp;user_id: '67890',<br />
+                                            &nbsp;&nbsp;&nbsp;device: 'mobile',<br />
+                                            &nbsp;&nbsp;&nbsp;geo_location: 'Brasil, São Paulo, SP',<br />
+                                            &nbsp;&nbsp;&nbsp;session_id: 'session_12345'<br />
+                                        },<br />
+                                        {<br />
+                                            &nbsp;&nbsp;&nbsp;_id: ObjectId('6723b3dde8022a59d3c1c18d'),<br />
+                                            &nbsp;&nbsp;&nbsp;event_type: 'add_to_cart',<br />
+                                            &nbsp;&nbsp;&nbsp;product_id: '12345',<br />
+                                            &nbsp;&nbsp;&nbsp;quantity: 1,<br />
+                                            &nbsp;&nbsp;&nbsp;timestamp: ISODate('2024-10-31T12:36:00.000Z'),<br />
+                                            &nbsp;&nbsp;&nbsp;session_id: 'session_12345'<br />
+                                        }<br />
+                                        ]<br />
+                                    </code>
+                                </div>
+
+                                <p>Essa flexibilidade é uma das características que fazem do MongoDB uma opção muito escalável e rápida para manipulação de dados!</p>
+
+                                <p>E essa foi uma estrutura simples que usamos,e é claro que existe muito mais regras de negócio e muito mais campos que precisa se compor a essa estrutura, mas com isso, nós já podemos entrar no Grafana e trabalhar com esses valores para realizar alguns paineis em nossa dashboard como:</p>
+                                <h3>O que é possível fazer com monitoramento com esses dados que criamos?</h3>
+                                
+                                <ul>
+                                    <li>
+                                        <p><strong>Visitas e Visualizações de Página</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Número total de visualizações, número de visualizações por página específica, número de visitas por dispositivo.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráficos de barras para visualizações por página e gráficos de linha para acompanhar visualizações ao longo do tempo.</li>
+                                            <li><strong>Valor</strong>: Esse painel ajuda a entender quais páginas e produtos são mais populares e se há padrões de horário ou dispositivos.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Acompanhamento de Cliques em Produtos</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Contagem de cliques por produto, cliques por origem (referrer), distribuição de cliques por dispositivos.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de barras para cliques por produto e gráfico de pizza para distribuição de dispositivos e fontes de cliques.</li>
+                                            <li><strong>Valor</strong>: Esse painel permite ver quais produtos estão chamando mais atenção, qual a origem do tráfego e quais dispositivos são mais utilizados.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Interações com o Carrinho de Compras</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Total de adições ao carrinho, remoções do carrinho, taxa de conversão de adições para compras.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de barras para adições e remoções por produto, gráfico de linha para monitorar a tendência ao longo do tempo.</li>
+                                            <li><strong>Valor</strong>: Esse painel ajuda a identificar produtos que têm muita adição ao carrinho, mas não convertem em compra, indicando onde o e-commerce pode estar perdendo clientes.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Finalizações de Compras e Receita Gerada</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Contagem de finalizações de compra, receita total, receita média por compra, volume de compras por dispositivo.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráficos de linha para acompanhar a receita e o número de compras ao longo do tempo, gráfico de pizza para dividir as compras por dispositivo.</li>
+                                            <li><strong>Valor</strong>: Esse painel é essencial para acompanhar o desempenho financeiro e identificar o comportamento de compra nos diferentes dispositivos.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Análise de Localização Geográfica</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Total de eventos por região (país, estado, cidade), receita por região, distribuição geográfica de visualizações e compras.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Mapas de calor para identificar onde estão os usuários mais ativos, gráficos de barras para comparações regionais de receita e visualizações.</li>
+                                            <li><strong>Valor</strong>: Este painel permite ver as áreas geográficas mais ativas, ajudando a direcionar campanhas de marketing ou a melhorar a experiência para determinadas regiões.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Taxa de Conversão por Sessão</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Contagem de sessões, taxa de conversão de visitas para compra, tempo médio de navegação até a compra.</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de linha para taxa de conversão ao longo do tempo e gráfico de barras para contagem de sessões.</li>
+                                            <li><strong>Valor</strong>: Esse painel é útil para avaliar o engajamento dos usuários e a eficácia de sessões em converter visualizações e interações em vendas.</li>
+                                        </ul>
+                                    </li>
+                                    <p>&nbsp;</p>
+                                    <li>
+                                        <p><strong>Eventos em Tempo Real</strong></p>
+                                        <ul>
+                                            <li><strong>Métricas</strong>: Número de eventos por tipo em tempo real (visualizações, cliques, adições ao carrinho, compras).</li>
+                                            <li><strong>Gráficos Sugeridos</strong>: Gráfico de linhas atualizado em tempo real para acompanhar o volume de eventos e gauge para contagem de eventos específicos.</li>
+                                            <li><strong>Valor</strong>: Esse painel oferece uma visão em tempo real do que os usuários estão fazendo no site, ideal para detectar picos de atividade e responder rapidamente a tendências ou problemas.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+
+                                <p>Esse é um bom começo para entender como uma ferramenta simples e poderosa como o MongoDB pode ajudar a criar uma estrutura escalável para e-commerce.</p>
+                                <p>E espero que este post tenha te ajudado de alguma forma, então até a próxima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        Copyright &copy; 2024 - Wilson Oliveira 
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                        <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.min.js"></script>
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../assets/js/mediumish.js"></script>
+</body>
+</html>

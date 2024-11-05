@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="icon" href="assets/images/logo.png">
+
+    <title>Entenda por que o code review é tão importante quanto a sua task | Wilson Oliveira</title>
+    <meta property="og:title" content="Entenda por que o code review é tão importante quanto a sua task" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="description" content="Jekyll template, Medium styled, free for bloggers." />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCoreDefault.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeRDark.min.css"> <!-- Tema escuro -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../assets/css/screen.css" rel="stylesheet">
+    <link href="../assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="layout-default">
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+        <div class="container pr-0">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../assets/images/logo.png" alt="Wilson Oliveira"> <span class="sitetitle">Technical Blog</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMediumish">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/wilson-oliveira-898b0915"><i class="fab fa-linkedin"></i> Linkdn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a target="_blank" target="_blank" class="nav-link" href="https://github.com/woliveira"><i class="fab fa-github"></i> Meu Github</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="site-content">
+        <div class="container">
+            <div class="mainheading">
+            </div>
+
+            <div class="main-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 pl-0">
+                            <div class="share sticky-top sticky-top-offset">
+                                <p>Share</p>
+                                <ul>
+                                    <li class="ml-1 mr-1">
+                                        <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://woliveira.github.io/blog/pages/monitoramento-no-grafana-pode-revelar-melhorias-no-formulario-de-nota-fiscal-da-aplicacao-para-efd-reinf.html" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                
+                                <div class="sep"></div>
+                                <ul>
+                                    <li>
+                                    <a class="small smoothscroll" href="#disqus_thread"></a>
+                                    </li>
+                                </ul>    
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 flex-first flex-md-unordered">
+                            <div class="mainheading">
+                                <div class="row post-top-meta">
+                                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                                        <img class="author-thumb" src="https://avatars.githubusercontent.com/u/136635?v=4" alt="Wilson Oliveira">
+                                    </div>
+                                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                                        <a target="_blank" class="link-dark" href="https://msfidelis.github.io/">Wilson Oliveira</a><br />
+                                        <span class="author-description">Full Stack Developer, PHP, GO, AWS, Node.Js, MySQL, MongoDb e Grafana</span>
+                                    </div>
+                                </div>
+                                
+                                <h1 class="posttitle">Entenda por que o code review é tão importante quanto a sua task</h1>
+                            </div>
+                          
+                            <img class="featured-image img-fluid lazyimg" src="../assets/images/entenda-por-que-o-code-review-e-tao-importante-quanto-a-sua-task-2.png" alt="Monitoramento no Grafana pode revelar melhorias no formulário de nota fiscal da aplicação para EFD-Reinf">
+                            
+                            <div class="article-post">
+                                <p><i>Neste post, compartilho conhecimentos sobre tecnologias que podem contribuir para o desenvolvimento de projetos escaláveis.</i></p>
+
+                                <p>Neste post, vou falar sobre um tema que muitos desenvolvedores já enfrentaram – ou estão enfrentando agora –, especialmente quem é novo na empresa ou sente aquela pressão de "mostrar serviço". Mas calma... não é bem assim que as coisas funcionam! Na verdade, podem ser muito mais complicadas do que você imagina. Vou tentar dar uma clareada no assunto, pois sei que muita gente ainda se sente perdida. Vamos lá!</p>
+                                <p>Quando falamos de code review, estamos falando de passar horas analisando o código dos colegas e revisando o seu próprio, o que, para muitos desenvolvedores, é quase um pesadelo, mas o "pesadelo" não é ter que fazer code review em si, é parar o que você está fazendo (sua task) para revisar o código dos coleguinhas (outros times), e esse é um dos principais motivos pelos quais muitos desenvolvedores priorizam suas tasks, do que param o que está fazendo para realizar code review, incluindo desde os Juniors até os Seniors.</p>
+
+                                <h2>O Dilema de Code Review x Task</h2>
+                                <p>Vamos falar de uma situação que acontece o tempo todo: você está com uma task em desenvolvimento, importante (visibilidade) ou não, que precisa ser entregue com qualidade, vou listar alguns requisitos comuns que você já deve conhecer no que você neste momento está preocupado:</p>
+                                <ul>
+                                    <li>Manter o código limpo</li>
+                                    <li>O código com os princípios SOLID(s) bem definidos</li>
+                                    <li>Com testes unitários bem realizados cobrindo todo o cenário</li>
+                                    <li>Ter mapeado todos os cenários</li>
+                                    <li>Com possibilidade de voltar seu código umas duzentas mil vezes</li>
+                                    <li>Com possibilidades do seu coleguinha pegar um erro que você não tinha visto</li>
+                                </ul>
+
+                                <p>Só para cumprir esses pontos, já sabemos que leva um bom tempo, né? E, além de tudo isso, ainda tem a possibilidade do seu gestor ou PO perguntando quando você vai terminar a task, e isso é normal, faz parte do trabalho, mas tem um detalhe essencial que ainda não mencionei: o code review.</p>
+                                <p>Aí vem o dilema: você prioriza a sua task ou para tudo para fazer code review? Agora você deve estar pensando: "Claro que eu faço o code review!" Mas faz mesmo? Ou espera o feedback dos colegas para só então começar a revisar com frequência? Pode ser que você já saiba a resposta.</p>
+
+                                <h2>Code review não é opcional</h2>
+                                <p>Se você está decidindo entre fazer uma coisa ou outra, já está no caminho errado, porque o code review não é opcional, ele precisa ser parte do seu trabalho, assim como desenvolver melhorias, corrigir bugs e alinhar com o time, ou seja, <strong>o code review deve fazer parte do seu tempo</strong>, e ponto final.</p>
+                                <p>Ninguém te disse que, ao entrar na empresa, o code review deveria ser parte da rotina? Pois é, não precisa te contar, isso já faz parte do pacote, e assim como você precisa de um tempo para tomar um café ou beber água, você também precisa de um tempo para o code review, e se a sua desculpa for "isso vai atrasar minha entrega", então talvez tenha faltado planejar melhor o tempo para o code review.</p>
+                                <p>O que eu entendi, e que você também deveria entender, é que o code review pode sim, melhorar seu código, ajudar a detectar problemas comuns e reforçar boas práticas, então, aqui estão alguns benefícios do code review:</p>
+
+                                <ul>
+                                    <li>Melhora a qualidade do seu código</li>
+                                    <li>Ajuda a manter a cultura do code review no time</li>
+                                    <li>Facilita para que seus colegas vejam pontos que talvez você não enxergou</li>
+                                    <li>Garante que o SOLID e outras boas práticas estejam presentes</li>
+                                    <li>Ajuda a empresa a manter um código mais limpo e eficiente</li>
+                                    <li>Te ajuda a policiar e manter as melhores práticas</li>
+                                </ul>
+
+                                <p>É claro que o code review pode parecer uma "perda de tempo" quando estamos correndo para entregar algo, mas, na verdade, ele previne retrabalho no futuro, e as grandes empresas sabem bem disso.</p>
+                                <h2>Code review em grandes empresas</h2>
+                                <p>Se você está preocupado com o tempo "gasto" com code review (que, na verdade, é um investimento), então vamos a alguns dados importantes:</p>
+                                <ul>
+                                    <li>Em algumas grandes empresas, como Microsoft e Google, entre 10% e 20% do tempo de desenvolvimento é dedicado ao code review, em equipes que lidam com código crítico, esse percentual pode chegar a 30%.</li>
+                                    <li>Um code review eficaz leva entre 30 e 60 minutos e, para garantir a qualidade, o ideal é revisar de 200 a 400 linhas de código por hora.</li>
+                                    <li>Para facilitar as revisões, essas empresas preferem <strong>pull requests</strong> menores, de 200 a 400 linhas, evitando aqueles códigos gigantescos e difíceis de revisar.</li>
+                                </ul>
+                                
+                                <p>Estudos mostram que times que investem tempo em code reviews <strong>reduzem o número de bugs em produção entre 30% e 50%</strong>, o que acaba economizando tempo e custos no longo prazo.</p>
+                                <h2>Conclusão: Por que tudo isso?</h2>
+                                
+                                <p>Eu precisei fazer toda essa contextualização para chegar a um ponto importante: o tempo investido em code review é para o seu benefício e para a empresa, porque <strong>tempo é dinheiro</strong>!</p>
+                                <p>Dessa forma, você previne bugs e refatorações futuras, evitando retrabalho em algo que poderia ter sido resolvido com a ajuda dos seus colegas, e esse tempo liberado pode ser usado para criar novas funcionalidades em vez de corrigir problemas antigos.</p> <p>Esse tempo dedicado ao code review, é para o time todo, manter essa cultura de code review, pois quanto mais o time adota a cultura de code review, mais se fortalecem as boas práticas e a qualidade do código, e quando todos entendem o valor disso, o code review deixa de ser um fardo e se torna uma rotina natural que faz parte do seu dia a dia como dev.</p> <p><strong>Não espere o feedback chegar para começar a fazer code reviews, comece agora mesmo!</strong></p> 
+
+                                <p>Bom... espero que este post tenha te ajudado de alguma forma, então até a próxima.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                        Copyright &copy; 2024 - Wilson Oliveira 
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                        <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.min.js"></script>
+    <script>
+        SyntaxHighlighter.all();
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../assets/js/mediumish.js"></script>
+</body>
+</html>
